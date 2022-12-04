@@ -13,7 +13,12 @@ class UsersPermissions extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('users_permissions',function(Blueprint $table)
+        {
+          $table->foreignId('user_id')->constrained();
+          $table->foreignId('permission_id')->constrained();
+        });
+        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -23,6 +28,11 @@ class UsersPermissions extends Migration
      */
     public function down()
     {
-        //
+         Schema::table('users_roles',function(Blueprint $table)
+        {
+          $table->dropForeign('user_id');
+          $table->dropForeign('permission_id');
+        });
+        Schema::dropIfExists('users_roles');
     }
 }
