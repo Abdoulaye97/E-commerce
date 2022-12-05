@@ -1,10 +1,10 @@
 <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
       
         <li class="nav-item">
-            <a href="" class="nav-link ">
+            <a href="{{route('home')}}" class="nav-link {{setMenuClass('home','active')}}">
               <i class="nav-icon fas fa-home"></i>
               <p>
                 Accueil
@@ -12,9 +12,10 @@
             </a>
         </li>
       
-      
-        <li class="nav-item ">
-            <a href="#" class="nav-link ">
+       @can('admin')
+        
+        <li class="nav-item {{setMenuClass('admin.management.','menu-open')}}">
+            <a href="#" class="nav-link {{setMenuClass('admin.management.','active')}}">
               <i class=" nav-icon fas fa-user-shield"></i>
               <p>
 
@@ -23,21 +24,17 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item active">
-                <a href="" class="nav-link">
+              <li class="nav-item ">
+                <a href="{{route('admin.management.shows_utilisateurs')}}" class="nav-link {{setMenuClass('admin.management.','active')}}">
                   <i class=" nav-icon fas fa-users-cog"></i>
                   <p>Utilisateurs</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-fingerprint"></i>
-                  <p>Roles et permissions</p>
-                </a>
-              </li>
             </ul>
         </li>
-      
+      @endcan
+
+      @can('employe')
         <li class="nav-item ">
             <a href="#" class="nav-link ">
                 <i class="nav-icon fas fa-cogs"></i>
@@ -64,32 +61,7 @@
                 
             </ul>
         </li>
-      
-        <li class="nav-item">
-            <a href="" class="nav-link ">
-                <i class="nav-icon fas fa-users"></i>
-                <p>
-                Gestion des clients
-                </p>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-exchange-alt"></i>
-                <p>
-                Gestion des locations
-                </p>
-            </a>
-        </li>
-
-        <li class="nav-header">CAISSE</li>
-        <li class="nav-item">
-            <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-coins"></i>
-                <p>
-                Gestion des paiements
-                </p>
-            </a>
-        </li>
+      @endcan
+        
   </ul>
 </nav>

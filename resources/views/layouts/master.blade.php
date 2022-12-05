@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Section Informatique</title>
  <link rel="stylesheet" href="{{mix("css/app.css")}}">
- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
  @livewireStyles
 </head>
 <body class="hold-transition sidebar-mini">
