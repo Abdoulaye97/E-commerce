@@ -6,7 +6,7 @@
 <img class="profile-user-img img-fluid img-circle" src="" alt="User profile picture">
 </div>
 
-<h3 class="profile-username text-center"></h3>
+<h3 class="profile-username text-center">{{fullName()}}</h3>
 
 <p class="text-muted text-center"></p>
 
