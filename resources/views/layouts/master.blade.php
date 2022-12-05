@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Section Informatique</title>
- <link rel="stylesheet" href="{{mix('css/app.css')}}">
+ <link rel="stylesheet" href="{{mix("css/app.css")}}">
  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
  @livewireStyles
 </head>
@@ -64,7 +64,7 @@
 </footer>
 </div>
    
-      <script src="{{mix('js/app.js')}}"></script>
+      <script src="{{mix("js/app.js")}}"></script>
      @livewireScripts
 </body>
 </html>
