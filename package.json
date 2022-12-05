@@ -21,6 +21,8 @@
         "sass-loader": "^11.0.1"
     },
     "dependencies": {
-        "alpinejs": "^3.10.5"
+        "admin-lte": "^3.2.0",
+        "alpinejs": "^3.10.5",
+        "sweetalert2": "^11.4.8"
     }
 }
