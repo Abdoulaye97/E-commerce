@@ -33,6 +33,23 @@ class Utilisateur extends Component
         ->extends('layouts.master')
         ->section('contenu');
     }
+    protected $message=[
+       'prenom.required' => 'Le prenom est obligatoire.',
+        'email.required' => 'Email est obligatoire.',
+        'prenom.min'=>'Votre Prenom doit superieur a 6 caracteres.',
+        'nom.required'=>'Le nom est obligatoire .',
+        'telephone.required'=>'Numero de telephone est obliagatoire.',
+        'email.unique' =>'Cette adresse email existe deja.',
+        'telephone.unique' =>'Numero telephone existe deja.',
+        'edituser.prenom.required' => 'Le prenom est obligqtoire.',
+        'edituser.email.required' => 'Email est obligatoire.',
+        'edituser.prenom.min'=>'Votre Prenom doit superieur a 6 caracteres.',
+        'edituser.nom.required'=>'Le nom est obligatoire.',
+        'edituser.email.unique' =>'Cette adresse email existe deja.',
+        'edituser.telephone.unique' =>'Numero telephone existe deja.',
+        'edituser.email.unique' =>'Cette adresse email existe deja.',
+        'edituser.telephone.unique' =>'Numero telephone existe deja.', 
+    ];
     public function AddUser()
     {
         $this->current_page=PAGECREATE;
@@ -70,23 +87,7 @@ class Utilisateur extends Component
        ];
       
     }
-    protected $message=[
-       'prenom.required' => 'Le prenom est obligatoire.',
-        'email.required' => 'Email est obligatoire.',
-        'prenom.min'=>'Votre Prenom doit superieur a 6 caracteres.',
-        'nom.required'=>'Le nom est obligatoire .',
-        'telephone.required'=>'Numero de telephone est obliagatoire.',
-        'email.unique' =>'Cette adresse email existe deja.',
-        'telephone.unique' =>'Numero telephone existe deja.',
-        'edituser.prenom.required' => 'Le prenom est obligqtoire.',
-        'edituser.email.required' => 'Email est obligatoire.',
-        'edituser.prenom.min'=>'Votre Prenom doit superieur a 6 caracteres.',
-        'edituser.nom.required'=>'Le nom est obligatoire.',
-        'edituser.email.unique' =>'Cette adresse email existe deja.',
-        'edituser.telephone.unique' =>'Numero telephone existe deja.',
-        'edituser.email.unique' =>'Cette adresse email existe deja.',
-        'edituser.telephone.unique' =>'Numero telephone existe deja.', 
-    ];
+    
     //cette fonction permet de controler l'email de telephone a temps reel
      public function UpdatedEmail()
     {

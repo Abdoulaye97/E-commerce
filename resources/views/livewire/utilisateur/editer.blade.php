@@ -30,6 +30,9 @@
 <div class="form-group">
 <label for="exampleInputPassword1">Adresse</label>
 <input type="text" class="form-control" wire:model="adresses" id="exampleInputPassword1" placeholder="Adressse">
+@error('adresse')
+	<span class="text-danger">{{$message}}</span>
+@enderror
 </div>
 <div class="form-group">
 @error("email")
