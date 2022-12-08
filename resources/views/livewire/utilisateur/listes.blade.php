@@ -22,8 +22,7 @@
 
 		<tr>
 		<th style="width: 10%">FistName</th>
-		<th style="width: 10%">LastName</th>
-		<th style="width:10%">Sexe</th>
+		<th style="width: 10%">LastName</th>	
 		<th style="width: 15%">Role</th>
 		<th style="width: 10%">telephone</th>
 		<th style="width: 10%">Adresse</th>
@@ -36,7 +35,6 @@
 		<tr>
 		<td>{{$user->prenom}}</td>
 		<td>{{$user->nom}}</td>
-		<td>@if($user->sexe == 1) M @else F @endif</td>
 		<td>{{$user->roles->implode('nom',"|")}}</td>
 		<td>{{$user->telephone}}</td>
 		<td>{{$user->adresse}}</td>

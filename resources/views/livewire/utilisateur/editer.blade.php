@@ -1,3 +1,5 @@
+<div class="row">
+<div class="col-md-7">
 <div class="card card-primary">
 <div class="card-header">
 <h3 class="card-title">Inscription</h3>
@@ -8,42 +10,42 @@
 <div class="card-body">
 <div class="form-group">
 <label for="exampleInputPassword1">Prenom</label>
-<input type="text" class="form-control" wire:model="prenom" id="exampleInputPassword1" placeholder="Prenom">
+<input type="text" class="form-control" wire:model.lazy="prenom" id="exampleInputPassword1" placeholder="Prenom">
   @error("prenom")
          <span class="text-danger">{{ $message }}</span>
   @enderror
 </div>
 <div class="form-group">
 <label for="exampleInputPassword1">Nom</label>
-<input type="text" class="form-control" wire:model="nom" id="exampleInputPassword1" placeholder="Nom">
+<input type="text" class="form-control" wire:model.lazy="nom" id="exampleInputPassword1" placeholder="Nom">
 @error("nom")
          <span class="text-danger">{{ $message }}</span>
 @enderror
 </div>
 <div class="form-group">
 <label for="exampleInputPassword1">Telephone</label>
-<input type="text" class="form-control" wire:model="telephone" id="exampleInputPassword1" placeholder="Telaphone">
+<input type="text" class="form-control" wire:model.lazy="telephone" id="exampleInputPassword1" placeholder="Telaphone">
 @error("telephone")
          <span class="text-danger">{{ $message }}</span>
 @enderror
 </div>
 <div class="form-group">
 <label for="exampleInputPassword1">Adresse</label>
-<input type="text" class="form-control" wire:model="adresses" id="exampleInputPassword1" placeholder="Adressse">
+<input type="text" class="form-control" wire:model.lazy="adresse" id="exampleInputPassword1" placeholder="Adressse">
 @error('adresse')
 	<span class="text-danger">{{$message}}</span>
 @enderror
 </div>
 <div class="form-group">
+<label for="exampleInputEmail1">Email address</label>
+<input type="email" class="form-control" wire:model.lazy="email" id="exampleInput" placeholder="Email">
 @error("email")
          <span class="text-danger">{{ $message }}</span>
  @enderror
-<label for="exampleInputEmail1">Email address</label>
-<input type="email" class="form-control" wire:model="email" id="exampleInput" placeholder="Email">
 </div>
 <div class="form-group">
 <label for="exampleInputPassword1">Password</label>
-<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+<input type="password" class="form-control" id="exampleInputPassword1" disabled placeholder="Par default (password)">
 </div>
 <div class="card-footer">
 <button type="submit" class="btn btn-primary">Submit</button>
@@ -51,8 +53,11 @@
 </div>
 </form>
 </div>
+</div>
+</div>
+
 <script>                     
-    window.addEventListener("showMessageSuccess", event=>{
+    window.addEventListener("ShowMessageSuccess", event=>{
         Swal.fire({
                 position: 'top-end',
                 icon: 'success',
